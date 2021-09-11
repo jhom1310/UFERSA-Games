@@ -31,7 +31,7 @@ Player::Player()
     
     anim->Add(INVERTED, seqInvert, 4);
     anim->Add(NORMAL, seqNormal, 4);
-
+    type = player;
     
 }
 
@@ -53,6 +53,10 @@ void Player::OnCollision(Object * obj)
         MoveTo(window->CenterX(), obj->Y() - 32);
     else
         MoveTo(window->CenterX(), obj->Y() + 32);
+
+    if (obj->Type() == object) {
+        MoveTo(window->CenterX(), window->CenterY());
+    }
     
 }
 

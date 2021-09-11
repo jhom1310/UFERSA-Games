@@ -23,6 +23,7 @@ Platform::Platform(float posX, float posY, uint platType)
         +1.0f * platform->Height() / 2.0f));
 
     MoveTo(posX, posY);
+    type = object;
 }
 
 // ---------------------------------------------------------------------------------

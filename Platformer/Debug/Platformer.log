@@ -1,3 +1,23 @@
-﻿  Platformer.cpp
-E:\Ciencia da Computacao\Jogos\Lab13\Platformer\Platformer\Platformer.cpp(34,71): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-  Platformer.vcxproj -> E:\Ciencia da Computacao\Jogos\Lab13\Platformer\Debug\Platformer.exe
+﻿  compilation object save succeeded; see C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Shaders\Pixel.cso
+  compilation object save succeeded; see C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Shaders\Vertex.cso
+  Animation.cpp
+  Background.cpp
+  Engine.cpp
+  Game.cpp
+  Geometry.cpp
+  Graphics.cpp
+  Platformer.cpp
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Platformer.cpp(34,71): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+  Image.cpp
+  Object.cpp
+  Platform.cpp
+  Player.cpp
+  Renderer.cpp
+  Scene.cpp
+  Sprite.cpp
+  Texture.cpp
+  TileSet.cpp
+  Timer.cpp
+  Window.cpp
+  Gerando Código...
+  Platformer.vcxproj -> C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Debug\Platformer.exe
