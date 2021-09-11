@@ -31,7 +31,7 @@ void Platformer::Init()
     player = new Player();
     scene->Add(player, MOVING);
 
-    Platform* plat = new Platform(window->Width(), window->Height(), LARGE);
+    Platform* plat = new Platform(window->Width()/2.0f, window->Height(), LARGE);
     scene->Add(plat, STATIC);
 }
 

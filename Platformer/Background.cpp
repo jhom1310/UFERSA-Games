@@ -23,7 +23,6 @@ Background::Background()
     imgB = new Image("Resources/BackgBack2.png");
 
     // cria sprites do plano de fundo
-    sky     = new Sprite("Resources/Sky2.png");    
     //backgF1 = new Sprite(imgF);
     //backgF2 = new Sprite(imgF);
     backgB1 = new Sprite(imgB);
@@ -40,7 +39,7 @@ Background::~Background()
     //delete backgF2;
     delete backgB1;
     delete backgB2;
-    delete sky;
+
 }
 
 // -------------------------------------------------------------------------------
@@ -56,8 +55,6 @@ void Background::Update()
 
 void Background::Draw()
 {
-    // desenha pano de fundo
-    sky->Draw(window->CenterX(), window->CenterY(), Layer::BACK);
 
     // desenha prédios mais distantes
     backgB1->Draw(xB, y, Layer::LOWER);

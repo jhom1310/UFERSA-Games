@@ -27,7 +27,9 @@ enum PLATTYPES { SMALL, MEDIUM, LARGE };
 class Platform : public Object
 {
 private:
+    float xF;
     Sprite * platform = nullptr;        // sprite da plataforma
+    Sprite* platform2 = nullptr;        // sprite da plataforma
 
 public:
     Platform(float posX, float posY, uint platType);    
@@ -41,7 +43,10 @@ public:
 // Função Membro Inline
 
 inline void Platform::Draw()
-{ platform->Draw(x, y, z); }
+{
+    
+
+}
 
 // ---------------------------------------------------------------------------------
 
