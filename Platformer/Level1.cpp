@@ -17,7 +17,7 @@ void Level1::Init()
 
     int space_between = 150;
 
-    Platform* plat = new Platform(window->Width(), window->CenterY(), SMALL, true);
+    Platform* plat = new Platform(window->Width(), window->CenterY(), LARGE, true);
     scene->Add(plat, STATIC);
 
     //plat = new Platform(window->Width() + 150 / 2.0f, window->Height(), FIRE, false);
@@ -39,13 +39,9 @@ void Level1::Update()
         view_bb = !view_bb;
         onclick = false;
     }
-    else {
+    else if (window->KeyDown('B')){
         onclick = true;
     }
-
-    if(window->KeyDown('H'))// reinicia o level
-        Engine::Next<Home>();
-
     // atualiza cena do jogo
     scene->Update();
     scene->CollisionDetection();

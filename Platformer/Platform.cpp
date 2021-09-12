@@ -54,7 +54,10 @@ Platform::~Platform()
 void Platform::Update()
 {
     if(moving)
-        Translate(-100.0f * gameTime, 0);
+        Translate(-200.0f * gameTime, 0);
+
+    if (x < 0)
+        MoveTo(window->Width()+30, y);
 }
 // -------------------------------------------------------------------------------
 

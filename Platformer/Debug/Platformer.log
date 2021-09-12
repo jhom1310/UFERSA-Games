@@ -1,7 +1,2 @@
-﻿  Background.cpp
-  Home.cpp
-  Level1.cpp
-C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(20,48): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-  Platformer.cpp
-  Gerando Código...
+﻿  Player.cpp
   Platformer.vcxproj -> C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Debug\Platformer.exe

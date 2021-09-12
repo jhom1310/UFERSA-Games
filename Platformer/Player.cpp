@@ -45,12 +45,6 @@ Player::~Player()
 
 void Player::OnCollision(Object * obj)
 {
-    // mantém personagem na posição correta em cima da plataforma
-    if (gravity == NORMAL)
-        MoveTo(window->CenterX(), obj->Y() - 32);
-    else
-        MoveTo(window->CenterX(), obj->Y() + 32);
-
     if (obj->Type() == object) {
         MoveTo(window->CenterX(), window->CenterY());
     }
@@ -64,22 +58,19 @@ void Player::Update()
     anim->NextFrame();
 
     // ação da gravidade sobre o personagem
-    if (gravity == NORMAL)
-        Translate(0, 100 * gameTime);
-    else
-        Translate(0, -100 * gameTime);
+    Translate(0, 100 * gameTime);
 
-    if (keyCtrl && window->KeyDown(VK_SPACE))
+    if (keyCtrl && (window->KeyDown(VK_DOWN)|| window->KeyDown(VK_UP)))
     {
         keyCtrl = false;
-        gravity = !gravity;
-        // tira player da plataforma para evitar
-        // detecção de colisão no quadro seguinte
-        if (gravity == NORMAL)
+        
+        // gravidade sempre vai existir, mas o player pode escolher subir ou descer
+        if (window->KeyDown(VK_DOWN))
             Translate(0, 12);
+        else if(window->KeyDown(VK_UP))
+            Translate(0, -12);
         else
             Translate(0, -50);
-        gravity = !gravity;
     }
     else if (window->KeyUp(VK_SPACE))
     {
@@ -96,7 +87,7 @@ void Player::Update()
     if (x - tileset->TileWidth() / 2.0f < 0)
         MoveTo(tileset->TileWidth() / 2.0f, y);
 
-    if ((y + (tileset->TileHeight() / 2.0f))+60 > window->Height())
+    if (y + tileset->TileHeight() / 2.0f > window->Height())
         MoveTo(x, window->Height() - tileset->TileHeight() / 2.0f);
 
     if (y - tileset->TileHeight() / 2.0f < 0)
