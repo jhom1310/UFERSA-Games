@@ -13,7 +13,7 @@
 
 // ---------------------------------------------------------------------------------
 
-Platform::Platform(float posX, float posY, uint platType, bool stop)
+Platform::Platform(float posX, float posY, uint platType, bool move)
 {
     if (platType == LARGE) {
         platform = new Sprite("Resources/tronco2.png");
@@ -36,7 +36,7 @@ Platform::Platform(float posX, float posY, uint platType, bool stop)
 
     move_x = 0;
 
-    stoped = stop;
+    moving = move;
 
     MoveTo(posX, posY);
     type = object;
@@ -46,17 +46,15 @@ Platform::Platform(float posX, float posY, uint platType, bool stop)
 
 Platform::~Platform()
 {
-    delete platform;
-   // delete bbox;
-    
+    delete platform;  
 }
 
 // -------------------------------------------------------------------------------
 
 void Platform::Update()
 {
-    if(stoped)
-        Translate(-200.0f * gameTime, 0);
+    if(moving)
+        Translate(-100.0f * gameTime, 0);
 }
 // -------------------------------------------------------------------------------
 

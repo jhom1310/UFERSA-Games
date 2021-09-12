@@ -16,7 +16,7 @@
 Background::Background()
 {
     MoveTo(window->CenterX(), window->CenterY(), Layer::BACK);
-    xF = xB = x;
+    xB = x;
 
     // carrega imagens
     //imgF = new Image("Resources/BackgFront2.png");
@@ -33,7 +33,6 @@ Background::Background()
 
 Background::~Background()
 {
-    delete imgF;
     delete imgB;    
     //delete backgF1;
     //delete backgF2;
@@ -47,7 +46,7 @@ Background::~Background()
 void Background::Update()
 {
     // move sprites com velocidades diferentes
-    xF -= 200 * gameTime;
+    //xF -= 200 * gameTime;
     xB -= 150 * gameTime;
 }
 

@@ -23,8 +23,7 @@
 class Background : public Object
 {
 private:
-    float xF, xB;                       // posição horizontal dos sprites
-    Image * imgF;                       // imagem de fundo frontal
+    float xB;                       // posição horizontal dos sprites
     Image * imgB;                       // imagem de fundo traseira    
     Sprite * backgB1;                   // pano de fundo dinâmico (traseiro 1)
     Sprite * backgB2;                   // pano de fundo dinâmico (traseiro 2)

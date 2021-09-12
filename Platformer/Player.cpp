@@ -90,17 +90,17 @@ void Player::Update()
     // Codigo comentado, nao tem necessidade de delimitar o player dentro da tela por enquanto
 
     // mantém personagem dentro da tela
-    /*if (x + tileset->TileWidth() / 2.0f > window->Width())
+    if (x + tileset->TileWidth() / 2.0f > window->Width())
         MoveTo(window->Width() - tileset->TileWidth() / 2.0f, y);
 
     if (x - tileset->TileWidth() / 2.0f < 0)
         MoveTo(tileset->TileWidth() / 2.0f, y);
 
-    if (y + tileset->TileHeight() / 2.0f > window->Height())
+    if ((y + (tileset->TileHeight() / 2.0f))+60 > window->Height())
         MoveTo(x, window->Height() - tileset->TileHeight() / 2.0f);
 
     if (y - tileset->TileHeight() / 2.0f < 0)
-        MoveTo(x, tileset->TileHeight() / 2.0f);*/
+        MoveTo(x, tileset->TileHeight() / 2.0f);
 
 }
 

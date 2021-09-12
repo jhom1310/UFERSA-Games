@@ -21,7 +21,8 @@ private:
     Scene* scene = nullptr;       // gerenciador de cena
     Player* player = nullptr;
 
-    bool onclick, view_BB;
+    bool onclick = false;
+    bool view_bb = false;
 
     //bool viewBBox = false;          // habilita visualização da bounding box
     //bool ctrlKeyB = false;          // controle da tecla B

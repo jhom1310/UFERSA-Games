@@ -1,6 +1,8 @@
 
 #include "Level1.h"
 #include "Platform.h"
+#include "Engine.h"
+#include "Home.h"
 
 void Level1::Init() 
 {
@@ -13,28 +15,18 @@ void Level1::Init()
     player = new Player();
     scene->Add(player, MOVING);
 
-    Platform* plat = new Platform(window->Width() + 250 / 2.0f, window->Height(), SMALL, true);
-    plat->MoveTo((window->Width() / 2.0f) + 150, window->Height() - (plat->Height()/2.0f));
+    int space_between = 150;
+
+    Platform* plat = new Platform(window->Width(), window->CenterY(), SMALL, true);
     scene->Add(plat, STATIC);
 
-    plat = new Platform(window->Width() + 150 / 2.0f, window->Height(), MEDIUM, false);
-    plat->MoveTo((window->Width() / 2.0f) + 150, window->Height() - (plat->Height() / 2.0f));
-    scene->Add(plat, STATIC);
+    //plat = new Platform(window->Width() + 150 / 2.0f, window->Height(), FIRE, false);
+    //plat->MoveTo((window->Width() / 2.0f) + 150, window->Height() - (plat->Height() / 2.0f));
+    //scene->Add(plat, STATIC);
 
-    plat = new Platform(window->Width() / 2.0f, 0 , GALHO, true);
-    plat->MoveTo((window->Width() / 2.0f) + 250, 100);
-    scene->Add(plat, STATIC);
-
-
-
-    plat = new Platform(0, 0, MEDIUM, false); // esse objeto é adicionado como forma de deixar independente o player
-    plat->MoveTo(0, -plat->Height()+1); // coloca o elemento em uma posicao 1 na altura
-    scene->Add(plat, STATIC);
-
-
-
-    onclick = false;
-    view_BB = false;
+    //plat = new Platform(window->Width() / 2.0f, 0 , GALHO, true);
+    //plat->MoveTo((window->Width() / 2.0f) + 250, 100);
+    //scene->Add(plat, STATIC);
 }
 
 void Level1::Update()
@@ -44,12 +36,15 @@ void Level1::Update()
         window->Close();
 
     if (window->KeyDown('B') && onclick) {
-        view_BB = !view_BB;
+        view_bb = !view_bb;
         onclick = false;
     }
     else {
         onclick = true;
     }
+
+    if(window->KeyDown('H'))// reinicia o level
+        Engine::Next<Home>();
 
     // atualiza cena do jogo
     scene->Update();
@@ -59,7 +54,7 @@ void Level1::Update()
 void Level1::Draw()
 {
     scene->Draw();
-    if(view_BB)
+    if(view_bb)
         scene->DrawBBox();
 }
 
