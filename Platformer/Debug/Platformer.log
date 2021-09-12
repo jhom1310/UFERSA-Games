@@ -1,7 +1,5 @@
 ﻿  Level1.cpp
-C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Platform.h(49,58): warning C4244: 'return': conversão de 'int' para 'float', possível perda de dados
-C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(16,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-  Platformer.cpp
-C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Platform.h(49,58): warning C4244: 'return': conversão de 'int' para 'float', possível perda de dados
-  Gerando Código...
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Platform.h(48,58): warning C4244: 'return': conversão de 'int' para 'float', possível perda de dados
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(16,79): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(20,69): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
   Platformer.vcxproj -> C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Debug\Platformer.exe

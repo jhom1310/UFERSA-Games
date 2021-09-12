@@ -20,7 +20,7 @@
 
 // ---------------------------------------------------------------------------------
 
-enum PLATTYPES { SMALL, MEDIUM, LARGE };
+enum PLATTYPES { SMALL, MEDIUM, LARGE, GALHO };
 
 // ---------------------------------------------------------------------------------
 
@@ -28,9 +28,11 @@ class Platform : public Object
 {
 private:
     Sprite * platform = nullptr;        // sprite da plataforma
+    float move_x;
+    bool stoped;
 
 public:
-    Platform(float posX, float posY, uint platType);    
+    Platform(float posX, float posY, uint platType,bool stop);    
     ~Platform();
 
     void Update();                      // atualização do objeto
@@ -41,10 +43,7 @@ public:
 // ---------------------------------------------------------------------------------
 // Função Membro Inline
 
-inline void Platform::Draw()
-{
-    platform->Draw(x,y,z);
-}
+
 
 inline float Platform::Height() { return platform->Height(); }
 

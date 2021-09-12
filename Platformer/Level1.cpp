@@ -13,12 +13,25 @@ void Level1::Init()
     player = new Player();
     scene->Add(player, MOVING);
 
-    Platform* plat = new Platform(window->Width() / 2.0f, window->Height(), LARGE);
+    Platform* plat = new Platform(window->Width() + 250 / 2.0f, window->Height(), SMALL, true);
+    plat->MoveTo((window->Width() / 2.0f) + 150, window->Height() - (plat->Height()/2.0f));
     scene->Add(plat, STATIC);
 
-    plat = new Platform(0, 0, LARGE); // esse objeto é adicionado como forma de deixar independente o player
+    plat = new Platform(window->Width() + 150 / 2.0f, window->Height(), MEDIUM, false);
+    plat->MoveTo((window->Width() / 2.0f) + 150, window->Height() - (plat->Height() / 2.0f));
+    scene->Add(plat, STATIC);
+
+    plat = new Platform(window->Width() / 2.0f, 0 , GALHO, true);
+    plat->MoveTo((window->Width() / 2.0f) + 250, 100);
+    scene->Add(plat, STATIC);
+
+
+
+    plat = new Platform(0, 0, MEDIUM, false); // esse objeto é adicionado como forma de deixar independente o player
     plat->MoveTo(0, -plat->Height()+1); // coloca o elemento em uma posicao 1 na altura
     scene->Add(plat, STATIC);
+
+
 
     onclick = false;
     view_BB = false;
