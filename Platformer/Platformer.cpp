@@ -13,6 +13,7 @@
 #include "Platformer.h"
 #include "Resources.h"
 
+#include "Home.h"
 // -----------------------------------------------------------------------------
 
 Scene * Platformer::scene = nullptr;
@@ -21,18 +22,6 @@ Scene * Platformer::scene = nullptr;
 
 void Platformer::Init()
 {
-    // cria cena do jogo
-    scene = new Scene();
-
-    // pano de fundo do jogo
-    backg = new Background();
-    scene->Add(backg, STATIC);
-
-    player = new Player();
-    scene->Add(player, MOVING);
-
-    Platform* plat = new Platform(window->Width()/2.0f, window->Height(), LARGE);
-    scene->Add(plat, STATIC);
 }
 
 // ------------------------------------------------------------------------------
@@ -83,7 +72,7 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
     //engine->graphics->VSync(true);
     
     // inicia o jogo
-    int status = engine->Start(new Platformer());
+    int status = engine->Start(new Home());
 
     delete engine;
     return status;

@@ -1,23 +1,9 @@
-﻿  compilation object save succeeded; see C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Shaders\Pixel.cso
-  compilation object save succeeded; see C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Shaders\Vertex.cso
-  Animation.cpp
-  Background.cpp
-  Engine.cpp
-  Game.cpp
-  Geometry.cpp
-  Graphics.cpp
-  Platformer.cpp
-C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Platformer.cpp(34,71): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
-  Image.cpp
-  Object.cpp
+﻿  Level1.cpp
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Platform.h(49,58): warning C4244: 'return': conversão de 'int' para 'float', possível perda de dados
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(16,73): warning C4244: 'argumento': conversão de 'int' para 'float', possível perda de dados
   Platform.cpp
-  Player.cpp
-  Renderer.cpp
-  Scene.cpp
-  Sprite.cpp
-  Texture.cpp
-  TileSet.cpp
-  Timer.cpp
-  Window.cpp
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Platform.h(49,58): warning C4244: 'return': conversão de 'int' para 'float', possível perda de dados
+  Platformer.cpp
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Platform.h(49,58): warning C4244: 'return': conversão de 'int' para 'float', possível perda de dados
   Gerando Código...
   Platformer.vcxproj -> C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Debug\Platformer.exe

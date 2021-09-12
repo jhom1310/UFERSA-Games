@@ -19,10 +19,7 @@ Player::Player()
     anim = new Animation(tileset, 0.120f, true);
 
    
-    BBox(new Rect(-1.0f * tileset->TileWidth() / 2.0f,
-        -1.0f * tileset->TileHeight() / 2.0f,
-        +1.0f * tileset->TileWidth() / 2.0f,
-        +1.0f * tileset->TileHeight() / 2.0f));
+    BBox(new Circle(10.0f));
 
     MoveTo(window->CenterX(), 24.0f, Layer::FRONT);
 
@@ -89,8 +86,11 @@ void Player::Update()
         keyCtrl = true;
     }
 
+
+    // Codigo comentado, nao tem necessidade de delimitar o player dentro da tela por enquanto
+
     // mantém personagem dentro da tela
-    if (x + tileset->TileWidth() / 2.0f > window->Width())
+    /*if (x + tileset->TileWidth() / 2.0f > window->Width())
         MoveTo(window->Width() - tileset->TileWidth() / 2.0f, y);
 
     if (x - tileset->TileWidth() / 2.0f < 0)
@@ -100,7 +100,7 @@ void Player::Update()
         MoveTo(x, window->Height() - tileset->TileHeight() / 2.0f);
 
     if (y - tileset->TileHeight() / 2.0f < 0)
-        MoveTo(x, tileset->TileHeight() / 2.0f);
+        MoveTo(x, tileset->TileHeight() / 2.0f);*/
 
 }
 
