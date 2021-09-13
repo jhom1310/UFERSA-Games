@@ -1,15 +1,20 @@
 
+
+//---------------------Bibliotecas----------------------
+
 #include "Level1.h"
 #include "Platform.h"
 #include "Engine.h"
 #include "Home.h"
 #include "Enemy.h"
 
+//------------------------------------------------------
+
 void Level1::Init() 
 {
     // cria cena do jogo
     scene = new Scene();
-
+ 
 	backg = new Background();
 	scene->Add(backg, STATIC);
 
@@ -26,10 +31,13 @@ void Level1::Init()
 
     plat = new Platform(window->Width() + 300, 100 , GALHO, true);
     scene->Add(plat, STATIC);
+
+    
 }
 
 void Level1::Update()
 {
+
     // sai com o pressionar do ESC
     if (window->KeyDown(VK_ESCAPE))
         window->Close();

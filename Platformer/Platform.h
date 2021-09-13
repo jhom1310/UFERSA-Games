@@ -31,7 +31,7 @@ private:
     bool moving;
 
 public:
-    Platform(float posX, float posY, uint platType,bool move);    
+    Platform(uint posX, uint posY, uint platType,bool move);    
     ~Platform();
 
     void Update();                      // atualização do objeto

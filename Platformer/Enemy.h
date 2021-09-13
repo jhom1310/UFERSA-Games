@@ -22,7 +22,7 @@ private:
     int typeEnemy;
 
 public:
-    Enemy(float posX, float posY, uint typeEnemy);                       // construtor
+    Enemy(uint posX, uint posY, uint typeEnemy);                       // construtor
     ~Enemy();                      // destrutor
 
     void Update();                      // atualização do objeto

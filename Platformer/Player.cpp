@@ -48,7 +48,9 @@ void Player::OnCollision(Object * obj)
     if (obj->Type() == ObjectType::BLOCK) {
         MoveTo(window->CenterX(), window->CenterY());
     }
-    
+
+    if (obj->Type() == ObjectType::ENEMY)
+        MoveTo(0, 0);
 }
 
 // ---------------------------------------------------------------------------------

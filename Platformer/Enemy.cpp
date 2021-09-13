@@ -3,7 +3,7 @@
 
 // ---------------------------------------------------------------------------------
 
-Enemy::Enemy(float posX, float posY, uint typeEnemy)
+Enemy::Enemy(uint posX, uint posY, uint typeEnemy)
 {
 	typeEnemy = typeEnemy;
 	switch (typeEnemy) { // define o tipo do inimigo que sera criado

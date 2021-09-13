@@ -13,7 +13,7 @@
 
 // ---------------------------------------------------------------------------------
 
-Platform::Platform(float posX, float posY, uint platType, bool move)
+Platform::Platform(uint posX, uint posY, uint platType, bool move)
 {
     if (platType == LARGE) {
         platform = new Sprite("Resources/tronco2.png");
@@ -49,7 +49,7 @@ Platform::~Platform()
 void Platform::Update()
 {
     if(moving)
-        Translate(-200.0f * gameTime, 0);
+        Translate(-160.0f * gameTime, 0);
 
     if (x < 0)
         MoveTo(window->Width(), y);
