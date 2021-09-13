@@ -22,7 +22,7 @@ Platform::Platform(uint posX, uint posY, uint platType, bool move)
         platform = new Sprite("Resources/tronco.png");
     }
     else if (platType == GALHO) {
-        platform = new Sprite("Resources/galho.png");
+        platform = new Sprite("Resources/galho1.png");
     }
     
  

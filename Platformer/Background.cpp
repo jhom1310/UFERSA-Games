@@ -19,7 +19,7 @@ Background::Background()
     xB = x;
 
     // carrega imagens
-    imgB = new Image("Resources/BackgBack2.png");
+    imgB = new Image("Resources/BackgBack21.png");
 
     // cria sprites do plano de fundo
     backgB1 = new Sprite(imgB);

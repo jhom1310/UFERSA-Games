@@ -2,15 +2,15 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\dylan.oliveira\Documents\jogos\unidade1\UFERSA-Games-Game1\Debug\Platformer.exe</FullPath>
+      <FullPath>E:\Ciencia da Computacao\Jogos\Lab13\Platformer\Debug\Platformer.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\dylan.oliveira\Documents\jogos\unidade1\UFERSA-Games-Game1\Platformer\Shaders\Pixel.cso</FullPath>
+      <FullPath>E:\Ciencia da Computacao\Jogos\Lab13\Platformer\Platformer\Shaders\Pixel.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\dylan.oliveira\Documents\jogos\unidade1\UFERSA-Games-Game1\Platformer\Shaders\Vertex.cso</FullPath>
+      <FullPath>E:\Ciencia da Computacao\Jogos\Lab13\Platformer\Platformer\Shaders\Vertex.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

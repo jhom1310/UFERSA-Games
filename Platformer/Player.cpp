@@ -61,7 +61,7 @@ void Player::Update()
 
     // ação da gravidade sobre o personagem
     Translate(0, 100 * gameTime);
-
+    /*
     if (keyCtrl && (window->KeyDown(VK_DOWN)|| window->KeyDown(VK_UP)))
     {
         keyCtrl = false;
@@ -78,7 +78,23 @@ void Player::Update()
     {
         keyCtrl = true;
     }
-
+    */
+    if (keyCtrl && window->KeyDown(VK_SPACE))
+    {
+        keyCtrl = false;
+        gravity = !gravity;
+        // tira player da plataforma para evitar
+        // detecção de colisão no quadro seguinte
+        if (gravity == NORMAL)
+            Translate(0, 12);
+        else
+            Translate(0, -50);
+        gravity = !gravity;
+    }
+    else if (window->KeyUp(VK_SPACE))
+    {
+        keyCtrl = true;
+    }
 
     // Codigo comentado, nao tem necessidade de delimitar o player dentro da tela por enquanto
 
