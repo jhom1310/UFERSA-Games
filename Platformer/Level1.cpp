@@ -21,18 +21,45 @@ void Level1::Init()
     player = new Player();
     scene->Add(player, MOVING);
 
-    int space_between = 150;
-
-    Platform* plat = new Platform(window->Width(), window->CenterY()+75, LARGE, true);
-    scene->Add(plat, STATIC);
-
     Enemy* enemy = new Enemy(window->Width(), window->Height()-75, EnemyType::FIRE);
     scene->Add(enemy, STATIC);
+    
+    int spaceBetween = 150; // media dos espacos entre os objetos que aparecem na tela
 
-    plat = new Platform(window->Width() + 300, 100 , GALHO, true);
+    int bufferPositionX = window->Width();
+
+    Platform* plat = new Platform(bufferPositionX, window->CenterY()+75, PLATTYPES::LARGE, true);
     scene->Add(plat, STATIC);
 
+    bufferPositionX += plat->Width() + spaceBetween;
+
+    plat = new Platform(bufferPositionX, 100 , PLATTYPES::GALHO, true);
+    scene->Add(plat, STATIC);
+
+    bufferPositionX += plat->Width() + spaceBetween;
+
+    plat = new Platform(bufferPositionX, 100, PLATTYPES::SMALL, true);
+    scene->Add(plat, STATIC);
     
+    bufferPositionX += plat->Width() + spaceBetween;
+
+    plat = new Platform(bufferPositionX, 100, PLATTYPES::GALHO, true);
+    scene->Add(plat, STATIC);
+
+    bufferPositionX += plat->Width() + spaceBetween;
+
+    plat = new Platform(bufferPositionX, 150, PLATTYPES::LARGE, true);
+    scene->Add(plat, STATIC);
+
+    bufferPositionX += plat->Width() + spaceBetween;
+
+    plat = new Platform(bufferPositionX, 150, PLATTYPES::SMALL, true);
+    scene->Add(plat, STATIC);
+
+    bufferPositionX += plat->Width() + spaceBetween;
+
+    plat = new Platform(bufferPositionX, 100, PLATTYPES::GALHO, true);
+    scene->Add(plat, STATIC);
 }
 
 void Level1::Update()
