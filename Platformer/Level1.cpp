@@ -3,6 +3,7 @@
 #include "Platform.h"
 #include "Engine.h"
 #include "Home.h"
+#include "Enemy.h"
 
 void Level1::Init() 
 {
@@ -17,16 +18,14 @@ void Level1::Init()
 
     int space_between = 150;
 
-    Platform* plat = new Platform(window->Width(), window->CenterY(), LARGE, true);
+    Platform* plat = new Platform(window->Width(), window->CenterY()+75, LARGE, true);
     scene->Add(plat, STATIC);
 
-    //plat = new Platform(window->Width() + 150 / 2.0f, window->Height(), FIRE, false);
-    //plat->MoveTo((window->Width() / 2.0f) + 150, window->Height() - (plat->Height() / 2.0f));
-    //scene->Add(plat, STATIC);
+    Enemy* enemy = new Enemy(window->Width(), window->Height()-75, EnemyType::FIRE);
+    scene->Add(enemy, STATIC);
 
-    //plat = new Platform(window->Width() / 2.0f, 0 , GALHO, true);
-    //plat->MoveTo((window->Width() / 2.0f) + 250, 100);
-    //scene->Add(plat, STATIC);
+    plat = new Platform(window->Width() + 300, 100 , GALHO, true);
+    scene->Add(plat, STATIC);
 }
 
 void Level1::Update()

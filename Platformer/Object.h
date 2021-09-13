@@ -25,7 +25,7 @@
 
 // -----------------------------------------------------------------------------
 
-enum TYPE{player, object};
+enum ObjectType{PLAYER, BLOCK, ENEMY};
 
 class Object
 {

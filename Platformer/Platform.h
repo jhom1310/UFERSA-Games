@@ -20,7 +20,7 @@
 
 // ---------------------------------------------------------------------------------
 
-enum PLATTYPES { SMALL, FIRE, LARGE, GALHO };
+enum PLATTYPES { SMALL, LARGE, GALHO };
 
 // ---------------------------------------------------------------------------------
 
@@ -28,7 +28,6 @@ class Platform : public Object
 {
 private:
     Sprite * platform = nullptr;        // sprite da plataforma
-    float move_x;
     bool moving;
 
 public:

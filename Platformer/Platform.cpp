@@ -24,9 +24,6 @@ Platform::Platform(float posX, float posY, uint platType, bool move)
     else if (platType == GALHO) {
         platform = new Sprite("Resources/galho.png");
     }
-    else {
-        platform = new Sprite("Resources/BackgFront2.png");
-    }
     
  
     BBox(new Rect(-1.0f * platform->Width() / 2.0f,
@@ -34,12 +31,10 @@ Platform::Platform(float posX, float posY, uint platType, bool move)
         +1.0f * platform->Width() / 2.0f,
         +1.0f * platform->Height() / 2.0f));
 
-    move_x = 0;
-
     moving = move;
 
     MoveTo(posX, posY);
-    type = object;
+    type = ObjectType::BLOCK;
 }
 
 // ---------------------------------------------------------------------------------
@@ -57,7 +52,7 @@ void Platform::Update()
         Translate(-200.0f * gameTime, 0);
 
     if (x < 0)
-        MoveTo(window->Width()+30, y);
+        MoveTo(window->Width(), y);
 }
 // -------------------------------------------------------------------------------
 
