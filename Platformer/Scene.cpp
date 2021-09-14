@@ -531,3 +531,25 @@ void Scene::CollisionDetection()
 }
 
 // --------------------------------------------------------------------------------
+
+Object* Scene::Get(int index)
+{
+    // se apontador aponta para objeto válido
+    if (its != statics.end())
+    {
+        // passa ao próximo objeto
+        // guarda apontador para o anterior
+        it = its++;
+        return *it;
+    }
+    else
+        if (itm != moving.end())
+        {
+            processing = MOVING;
+            it = itm++;
+            return *it;
+        }
+        else
+            // chegou ao fim das listas
+            return nullptr;
+}

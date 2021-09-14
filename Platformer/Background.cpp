@@ -33,7 +33,6 @@ Background::~Background()
     delete imgB;    
     delete backgB1;
     delete backgB2;
-
 }
 
 // -------------------------------------------------------------------------------

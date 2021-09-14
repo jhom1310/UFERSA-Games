@@ -72,8 +72,8 @@ void Enemy::Draw()
 {
 	switch (typeEnemy) {
 	case FIRE:
-		enemy->Draw(moveEnemy, y, Layer::LOWER);
-		copyEnemy->Draw(moveEnemy + img->Width(), y, Layer::LOWER);
+		enemy->Draw(moveEnemy, y, Layer::FRONT);
+		copyEnemy->Draw(moveEnemy + img->Width(), y, Layer::FRONT);
 
 		// traz pano de fundo de volta para dentro da tela
 		if (moveEnemy + img->Width() / 2.0f < 0)

@@ -5,9 +5,6 @@
 
 void Home::Init() {
 	backg = new Sprite("Resources/background_inicial.png");// definindo funo da tela home
-	
-														   //animate = new Sprite("Resources/animate.png"); 
-	// Pequena animacao na tela para chamar atencao do jogador
 }
 
 void Home::Finalize() {

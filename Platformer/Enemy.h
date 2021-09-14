@@ -15,7 +15,7 @@ enum EnemyType{FIRE, MACHINE};
 class Enemy : public Object
 {
 private:
-    float moveEnemy;   
+    float moveEnemy=0;   
     Image* img = nullptr;
     Sprite* enemy = nullptr;
     Sprite* copyEnemy = nullptr;

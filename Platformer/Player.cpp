@@ -10,12 +10,14 @@
 **********************************************************************************/
 
 #include "Player.h"
+#include "Engine.h"
+#include "Level1.h"
 
 // ---------------------------------------------------------------------------------
 
 Player::Player()
 {
-    tileset = new TileSet("Resources/bird2.png", 32, 48, 5, 10);
+    tileset = new TileSet("Resources/bird3.png", 32, 48, 5, 10);
     anim = new Animation(tileset, 0.120f, true);
 
    
@@ -49,8 +51,10 @@ void Player::OnCollision(Object * obj)
         MoveTo(window->CenterX(), window->CenterY());
     }
 
-    if (obj->Type() == ObjectType::ENEMY)
-        MoveTo(0, 0);
+    //if (obj->Type() == ObjectType::ENEMY)
+        //Engine::Next<Level1>();
+        //window->Close();// medida paleativa
+    
 }
 
 // ---------------------------------------------------------------------------------
@@ -61,7 +65,7 @@ void Player::Update()
 
     // ação da gravidade sobre o personagem
     Translate(0, 100 * gameTime);
-    /*
+    
     if (keyCtrl && (window->KeyDown(VK_DOWN)|| window->KeyDown(VK_UP)))
     {
         keyCtrl = false;
@@ -78,8 +82,8 @@ void Player::Update()
     {
         keyCtrl = true;
     }
-    */
-    if (keyCtrl && window->KeyDown(VK_SPACE))
+    
+    /*if (keyCtrl && window->KeyDown(VK_SPACE))
     {
         keyCtrl = false;
         gravity = !gravity;
@@ -94,7 +98,7 @@ void Player::Update()
     else if (window->KeyUp(VK_SPACE))
     {
         keyCtrl = true;
-    }
+    }*/
 
     // Codigo comentado, nao tem necessidade de delimitar o player dentro da tela por enquanto
 
