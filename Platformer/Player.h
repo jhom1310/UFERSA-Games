@@ -28,6 +28,8 @@ enum Gravity {NORMAL,INVERTED};         // tipo da gravidade
 class Player : public Object
 {
 private:
+    float score;
+    bool colisionEnemy = false;
     TileSet * tileset = nullptr;        // folha de sprites do personagem
     Animation * anim = nullptr;         // animação do personagem
     uint gravity = NORMAL;              // gravidade atuando sobre o jogador
@@ -40,6 +42,8 @@ public:
     void OnCollision(Object * obj);     // resolução da colisão
     void Update();                      // atualização do objeto
     void Draw();                        // desenho do objeto
+    bool CollidedEnemy();
+    float Score();
 };
 
 // ---------------------------------------------------------------------------------

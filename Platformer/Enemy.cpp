@@ -58,7 +58,7 @@ void Enemy::Update()
 	switch (typeEnemy)
 	{
 		case FIRE: 
-			moveEnemy -= 150 * gameTime; 
+			moveEnemy -= 180 * gameTime; 
 			
 			break;
 		case MACHINE:

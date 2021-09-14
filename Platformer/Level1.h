@@ -10,6 +10,7 @@
 #include "Sprite.h"
 #include "Scene.h"
 #include "Background.h"
+#include "Player.h"
 
 // ------------------------------------------------------------------------------
 
@@ -18,6 +19,7 @@ class Level1 : public Game
 private:
     Background* backg = nullptr;       // background
     Scene* scene = nullptr;       // gerenciador de cena
+    Player* player = nullptr;
 
     bool onclick = false;
     bool view_bb = false;

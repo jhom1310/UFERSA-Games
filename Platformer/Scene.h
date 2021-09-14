@@ -88,8 +88,6 @@ public:
 
     bool Collision(Object * oa, Object * ob);   // verifica se há colisão entre dois objetos
     void CollisionDetection();                  // trata a colisão entre objetos da cena
-
-    Object* Get(int index);                            // retorna próximo objeto da lista
 };
 
 // --------------------------------------------------------------------------------

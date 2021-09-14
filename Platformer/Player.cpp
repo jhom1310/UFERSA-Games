@@ -12,7 +12,7 @@
 #include "Player.h"
 #include "Engine.h"
 #include "Level1.h"
-
+#include <sstream>
 // ---------------------------------------------------------------------------------
 
 Player::Player()
@@ -31,7 +31,7 @@ Player::Player()
     anim->Add(INVERTED, seqInvert, 4);
     anim->Add(NORMAL, seqNormal, 4);
     type = ObjectType::PLAYER;
-    
+    this->score = 0.0f;
 }
 
 // ---------------------------------------------------------------------------------
@@ -47,16 +47,28 @@ Player::~Player()
 
 void Player::OnCollision(Object * obj)
 {
-    if (obj->Type() == ObjectType::BLOCK) {
+    /*if (obj->Type() == ObjectType::BLOCK)
+    {
         MoveTo(window->CenterX(), window->CenterY());
     }
-
-    //if (obj->Type() == ObjectType::ENEMY)
-        //Engine::Next<Level1>();
+    else*/ if (obj->Type() == ObjectType::ENEMY)
+    {
+        colisionEnemy = true;
+    }
+    else {
+        float amount = 0.1 * gameTime;
+        score += amount;
+        std::stringstream  ss;
+        ss << "Score: " << score << "\n";
+        OutputDebugString(ss.str().c_str());
+    }
         //window->Close();// medida paleativa
     
 }
 
+bool Player::CollidedEnemy() {
+    return colisionEnemy;
+}
 // ---------------------------------------------------------------------------------
 
 void Player::Update()

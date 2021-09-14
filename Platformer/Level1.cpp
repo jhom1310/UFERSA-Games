@@ -20,7 +20,7 @@ void Level1::Init()
 	backg = new Background();
 	//scene->Add(backg, STATIC);
 
-    Player * player = new Player();
+    player = new Player();
     scene->Add(player, MOVING);
 
     Enemy* enemy = new Enemy(window->Width(), window->Height() - 20, EnemyType::FIRE);
@@ -91,8 +91,7 @@ void Level1::Update()
 
     if (window->KeyDown('H'))
         Engine::Next<Home>();
- 
-    if(window->KeyDown('M'))
+    else if(player->CollidedEnemy())
         Engine::Next<Gameover>();
 }
 
