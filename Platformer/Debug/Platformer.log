@@ -1,1 +1,7 @@
-﻿  Platformer.vcxproj -> E:\Ciencia da Computacao\Jogos\Lab13\Platformer\Debug\Platformer.exe
+﻿  Level1.cpp
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(33,69): warning C4244: 'argumento': conversão de 'float' para 'uint', possível perda de dados
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(43,60): warning C4244: 'argumento': conversão de 'float' para 'uint', possível perda de dados
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(53,60): warning C4244: 'argumento': conversão de 'float' para 'uint', possível perda de dados
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(58,60): warning C4244: 'argumento': conversão de 'float' para 'uint', possível perda de dados
+C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Platformer\Level1.cpp(68,60): warning C4244: 'argumento': conversão de 'float' para 'uint', possível perda de dados
+  Platformer.vcxproj -> C:\Users\thoma\Documents\Jogos\unidade_1\UFERSA-Games-Game1\Debug\Platformer.exe

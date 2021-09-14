@@ -23,7 +23,7 @@ void Level1::Init()
     player = new Player();
     scene->Add(player, MOVING);
 
-    Enemy* enemy = new Enemy(window->Width(), window->Height() - 20, EnemyType::FIRE);
+    Enemy* enemy = new Enemy(window->Width(), window->Height() - 10, EnemyType::FIRE);
     scene->Add(enemy, STATIC);
     
     int spaceBetween = 150; // media dos espacos entre os objetos que aparecem na tela
