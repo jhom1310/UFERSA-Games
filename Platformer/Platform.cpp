@@ -17,19 +17,28 @@ Platform::Platform(uint posX, uint posY, uint platType, bool move)
 {
     if (platType == LARGE) {
         platform = new Sprite("Resources/tronco2.png");
+        BBox(new Rect((-1.0f * platform->Width() / 2.0f)+10,
+            (-1.0f * platform->Height() / 2.0f) + 15,
+            (+1.0f * platform->Width() / 2.0f)-10,
+            +1.0f * platform->Height() / 2.0f));
     }
     else if (platType == SMALL) {
         platform = new Sprite("Resources/tronco.png");
+        BBox(new Rect((-1.0f * platform->Width() / 2.0f) + 10,
+            (-1.0f * platform->Height() / 2.0f)+15,
+            (+1.0f * platform->Width() / 2.0f)-10,
+            +1.0f * platform->Height() / 2.0f));
     }
     else if (platType == GALHO) {
         platform = new Sprite("Resources/galho1.png");
+        BBox(new Rect(-1.0f * platform->Width() / 2.0f,
+            -1.0f * platform->Height() / 2.0f,
+            +1.0f * platform->Width() / 2.0f,
+            +1.0f * platform->Height() / 2.0f));
     }
     
  
-    BBox(new Rect(-1.0f * platform->Width() / 2.0f,
-        -1.0f * platform->Height() / 2.0f,
-        +1.0f * platform->Width() / 2.0f,
-        +1.0f * platform->Height() / 2.0f));
+    
 
     moving = move;
 

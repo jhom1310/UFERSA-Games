@@ -9,6 +9,7 @@
 #include "Enemy.h"
 #include "Player.h"
 #include "Gameover.h"
+#include "Winner.h"
 
 //------------------------------------------------------
 
@@ -71,28 +72,26 @@ void Level1::Init()
 
 void Level1::Update()
 {
-
-    // sai com o pressionar do ESC
-    if (window->KeyDown(VK_ESCAPE))
-        window->Close();
-
-    if (window->KeyDown('B') && onclick) {
-        view_bb = !view_bb;
-        onclick = false;
-    }
-    else if (window->KeyDown('B')){
-        onclick = true;
-    }
-
     // atualiza cena do jogo
     scene->Update();
     scene->CollisionDetection();
     backg->Update();
 
-    if (window->KeyDown('H'))
+    if (window->KeyDown('B') && onclick) {
+        view_bb = !view_bb;
+        onclick = false;
+    }
+    else if (window->KeyDown('B')) {
+        onclick = true;
+    }
+
+    // retornao ao menu com o pressionar do ESC
+    if (window->KeyDown(VK_ESCAPE))
         Engine::Next<Home>();
-    else if(player->CollidedEnemy())
+    else if (player->CollidedEnemy())
         Engine::Next<Gameover>();
+    else if (player->Score()>=10)
+        Engine::Next<Winner>();
 }
 
 void Level1::Draw()

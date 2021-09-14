@@ -47,23 +47,19 @@ Player::~Player()
 
 void Player::OnCollision(Object * obj)
 {
-    /*if (obj->Type() == ObjectType::BLOCK)
-    {
-        MoveTo(window->CenterX(), window->CenterY());
-    }
-    else*/ if (obj->Type() == ObjectType::ENEMY)
+    if (obj->Type() == ObjectType::BLOCK)
     {
         colisionEnemy = true;
     }
-    else {
-        float amount = 0.1 * gameTime;
-        score += amount;
-        std::stringstream  ss;
-        ss << "Score: " << score << "\n";
-        OutputDebugString(ss.str().c_str());
-    }
-        //window->Close();// medida paleativa
+    else if (obj->Type() == ObjectType::ENEMY)
+    {
+        colisionEnemy = true;
+    } //window->Close();// medida paleativa
     
+}
+
+float Player::Score() {
+    return score;
 }
 
 bool Player::CollidedEnemy() {
@@ -126,6 +122,13 @@ void Player::Update()
 
     if (y - tileset->TileHeight() / 2.0f < 0)
         MoveTo(x, tileset->TileHeight() / 2.0f);
+
+    // atualiza o score do jogador
+    float amount = 0.2 * gameTime;
+    score += amount;
+    std::stringstream  ss;
+    ss << "Score: " << score << "\n";
+    OutputDebugString(ss.str().c_str());
 
 }
 
